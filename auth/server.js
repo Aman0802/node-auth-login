@@ -28,8 +28,6 @@ app.post('/users/register', (req, res) => {
     let { email, password, name, confirmPassword } = req.body;
     let errors = [];
 
-    console.log(email, password, name, confirmPassword)
-
     if (!name || !email || !password || !confirmPassword) {
         errors.push({ message: "Please enter all fields" });
     }
